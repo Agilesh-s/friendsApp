@@ -14,11 +14,11 @@
                 </thead>
                 <tbody class="table-group-divider">
                   <tr *ngFor = "let i of friendData">
-                    <td>{{i._id}}</td>
-                    <td>{{i.name}}</td>
-                    <td>{{i.friendName}}</td>
-                    <td>{{i.friendNickName}}</td>
-                    <td>{{i.DescribeYourFriend}}</td>
+                    <td name="_id" [(ngModel)]="_id">{{i._id}}</td>
+                    <td name="name" [(ngModel)]="name">{{i.name}}</td>
+                    <td name="friendName" [(ngModel)]="friendName">{{i.friendName}}</td>
+                    <td name="friendNickName" [(ngModel)]="friendNickName">{{i.friendNickName}}</td>
+                    <td name="DescribeYourFriend" [(ngModel)]="DescribeYourFriend">{{i.DescribeYourFriend}}</td>
                 </tr>
                 </tbody>
               </table>
