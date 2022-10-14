@@ -10,7 +10,13 @@ export class FriendComponent implements OnInit {
 
   constructor(private myApi:ApiService) {
     this.fetchData()
-   }
+  }
+
+  _id = ""
+  name = ""
+  friendName = ""
+  friendNickName = ""
+  DescribeYourFriend = ""
 
   fetchData = ()=>{
     this.myApi.datas().subscribe(
@@ -18,6 +24,17 @@ export class FriendComponent implements OnInit {
         this.friendData = data
       }
     )
+  }
+
+  readValues = ()=>{
+    let data = {
+      "_id" : this._id,
+      "name" : this.name,
+      "friendName" : this.friendName,
+      "friendNickName" : this.friendNickName,
+      "DescribeYourFriend" :this.DescribeYourFriend  
+    }
+    console.log(data)
   }
 
   friendData:any = []

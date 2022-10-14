@@ -11,4 +11,9 @@ export class ApiService {
   datas = ()=>{
     return this.http.get("http://dummyapifriends.herokuapp.com/view")
   }
+  
+  dataLink = (data:any)=>{
+    return this.http.post("https://dummyapifriends.herokuapp.com/adddata",data)
+  }
+
 }
